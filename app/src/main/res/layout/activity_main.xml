@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationViewid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="loading.json"
+        app:lottie_repeatCount="1000" />
+
+
+
+
+
+    <TableLayout
+        android:showDividers="middle"
+        android:id="@+id/table1"
+        android:divider="@drawable/table_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+        <TableRow>
+<!--            <TextView android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#45BAEF"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="Name"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                />-->
+
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/stdname"
+                android:background="@color/white"
+                android:text=""
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"
+                android:textSize="20sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+        </TableRow>
+        <TableRow android:layout_marginTop="20dp"
+            android:divider="@drawable/table_divider">
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#45BAEF"
+                android:text="Year"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textStyle="bold"
+
+
+                android:text=""
+                android:textSize="20sp"
+                android:layout_weight="3"
+                android:id="@+id/year"
+                android:gravity="center_horizontal"
+                />
+        </TableRow>
+        <TableRow android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#45BAEF"
+                android:text="ID"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/rollno"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="#45BAEF"
+                android:text="Branch"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text=""
+                android:textStyle="bold"
+                android:id="@+id/branch"
+                android:textSize="20sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/custom_progressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/percentage"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressbar"
+        app:layout_constraintEnd_toEndOf="@+id/progressbar"
+        app:layout_constraintStart_toStartOf="@+id/progressbar"
+        app:layout_constraintTop_toTopOf="@+id/progressbar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:id="@+id/table2"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85">
+
+        <TableRow android:background="#96c896">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Present"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Absent"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/present"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+
+                android:textStyle="bold"
+                android:id="@+id/absent"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/total"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/catcherror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationViewid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

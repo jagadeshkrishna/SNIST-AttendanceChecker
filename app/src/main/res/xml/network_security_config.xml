@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">quotes.toscrape.com</domain>
+        <domain includeSubdomains="true">103.167.126.190</domain>
+        <domain includeSubdomains="true">103.15.62.28</domain>
+
+    </domain-config>
+</network-security-config>
